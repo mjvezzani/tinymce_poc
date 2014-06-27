@@ -1,28 +1,21 @@
-== README
+== SETUP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Steps to get up and running in rails 4
 
-Things you may want to cover:
+* add gem 'tinymce-rails' to project and bundle
 
-* Ruby version
+* Create a config/tinymce.yml file with global configs
+  *toolbar:
+    - styleselect | bold italic | link image | undo redo
+    - table | fullscreen
+  *plugins:
+    - table
+    - fullscreen
 
-* System dependencies
+* Add //= require tinymce in your application.js
 
-* Configuration
+* Add :class => 'tinymce' to any from text_areas
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Call <%= tinymce %> at the bottom of your form to initialize
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
